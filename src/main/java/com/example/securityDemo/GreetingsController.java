@@ -36,8 +36,6 @@ public class GreetingsController {
 	
 	
 	
-	
-	
 	@GetMapping("/hello")
 	public String sayHello()
 	{
@@ -70,7 +68,8 @@ public class GreetingsController {
 		
 		try {
 			
-			authentication= authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(loginRequest.getUsername(),loginRequest.getPassword()));
+			authentication= authenticationManager
+					.authenticate(new UsernamePasswordAuthenticationToken(loginRequest.getUsername(),loginRequest.getPassword()));
 			
 		}
 		

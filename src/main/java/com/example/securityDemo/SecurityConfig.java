@@ -64,6 +64,7 @@ public class SecurityConfig {
 				
 				            
 		http.csrf(csrf->csrf.disable());
+		//The below code should be written compulsorily to make Jwt filters active
 		http.addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
 		
 		return http.build();
