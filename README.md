@@ -16,3 +16,26 @@ Helper Classes:
 
 3. AuthEntryPointJwt
 * Provides custom handling for unauthorized requests, typically when authentication is required but not supplied or valid.
+* When an unauthorized request is detected, it logs the error and returns a JSON response with an error message, status code and the path attempted.
+
+
+
+Dependencies Required For JWT:
+
+<dependency>
+    <groupId>io.jsonwebtoken</groupId>
+    <artifactId>jjwt-api</artifactId>
+    <version>0.12.6</version>
+</dependency>
+<dependency>
+    <groupId>io.jsonwebtoken</groupId>
+    <artifactId>jjwt-impl</artifactId>
+    <version>0.12.6</version>
+    <scope>runtime</scope>
+</dependency>
+<dependency>
+    <groupId>io.jsonwebtoken</groupId>
+    <artifactId>jjwt-jackson</artifactId> <!-- or jjwt-gson if Gson is preferred -->
+    <version>0.12.6</version>
+    <scope>runtime</scope>
+</dependency>
